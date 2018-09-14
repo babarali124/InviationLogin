@@ -1,0 +1,234 @@
+body {
+   background-color: black;
+        
+}
+
+
+
+.cancel{
+    cursor: pointer;
+}
+
+.item_title{
+font-size: 130%;
+    font-family: sans-serif;
+
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.filter{
+    font-size: 17px;
+    font-family: sans-serif;
+}
+.item_text{
+    height:79%;
+    margin-bottom: 1%;
+    white-space: normal; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 80%;
+    font-family: sans-serif;
+
+}
+.item{
+    width: 15%;
+    height:80%;
+    display: inline-block;    
+    padding:10px;
+    margin:5px;
+/* background-color: #aaaaaa;*/
+    border-style: solid;
+    border-width:5%;
+    white-space: normal;
+    vertical-align: text-top;
+    overflow-wrap: break-word;
+
+
+}
+
+.case {
+    bottom:20px;
+   width:93%;font-size: 17px;
+    font-family: sans-serif;
+}
+
+.tweet {
+
+   width:93%;;font-size: 17px;
+    font-family: sans-serif;
+}
+
+
+
+#direct{
+    font-size: 17px;
+}
+
+.b{
+     background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+  
+    position: relative;
+    bottom:0px;
+    padding: 1.5% 5%;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+font-size: 80%;
+    cursor: pointer;
+}
+
+    .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    width:100%;
+        
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+    cursor: pointer;
+}
+    #info{
+
+
+overflow:hidden;
+border-style: solid;
+    border-width:5px;
+    width: 200px;
+        height:200px;
+        opacity: 0.8;
+        position: absolute;
+        z-index: 1;
+         overflow-wrap: break-word;
+/*    height: 200px;*/
+}
+    .direct{
+/*        position: relative;*/
+        background-color: #ba0707;
+/*        top: 4px;*/
+/*        float: right;*/
+/*        left: 30px;*/
+}
+    .tweet{
+/*         position: relative;*/
+        background-color: #94a35e;
+/*        top: 4px;*/
+/*        left: 30px;*/
+/*        float: right;*/
+    }
+    .case {
+/*        position: relative;*/
+        background-color: #358269;
+/*        float: right;*/
+        
+}
+    .inactive {
+         background-color: #828282;
+        
+}
+    #thing{
+/*
+        position: relative;
+        left: 30px;
+*/      padding-left:5%;
+        padding-right:5%;
+        font: 15px arial, sans-serif;
+    }  
+
+    #title {
+        padding-left:5%;
+        padding-right:5%;
+/*
+        display: inline;
+        position: relative;
+        left: 15px;
+*/
+        font: 130% arial, sans-serif;
+        text-transform: uppercase;
+}
+    #profile {
+        position: relative;
+        width: 100%;
+        height:200px;
+        object-fit: cover;
+}
+
+.color_filter{
+    background-color: rgba(76, 76, 76);
+    width: 100%;
+    
+}
+
+.filterTitle{
+
+    background-color: rgba(150, 150, 76);
+font-size: 20px;
+    font-family: sans-serif;
+    text-align: center;
+
+
+}
+#filters{
+    background-color: rgba(76, 76, 76, 0.3);
+    width: 20%;
+    float: right;
+    position:absolute;
+    z-index: 1;
+    right:0;
+    opacity: 0.8;
+}
+
+#nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+}
+
+.nav {
+    float: left;
+}
+
+.nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+
+#list{
+height: 24%;
+overflow:auto;
+white-space:nowrap;
+background-color: rgba(76, 76, 76, 0.3);
+border:none;
+      opacity: 0.8;
+        position:absolute;
+    bottom:10px;
+
+        z-index: 1;
+left:0px;
+    right: 0px;
+
+    
+}

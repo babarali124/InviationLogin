@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script>
+        console.log(localStorage.getItem('invitation_login'));
+        if(localStorage.getItem('invitation_login') != 'true'){
+                window.location.href = "/invitation/login.html"
+            }
+        </script>
+    <script>
+    </script>
+    <style>
+        .slidecontainer {
+    width: 100%;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.slider:hover {
+    opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+            
+            .button{
+                width:100%;
+                    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+                
+    cursor: pointer;
+            }
+        .inactive {
+         background-color: #828282;
+        
+}
+            .b{
+     background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+  
+    position: relative;
+    bottom:0px;
+    padding: 1.5% 5%;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+font-size: 80%;
+    cursor: pointer;
+}
+.list{
+white-space:nowrap;
+background-color: #555;
+border:none;
+        position:absolute;
+        z-index: 1;
+    left:-40px;
+    right: 0px;
+     
+}
+            #list_search{
+                top: 120px;
+            }
+            .item_text{
+    margin-bottom: 1%;
+    white-space: normal; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 90%;
+    font-family: sans-serif;
+}
+.item{
+    
+    height:80%;
+    display: block;    
+    padding:10px;
+    margin:5px;
+/* background-color: #aaaaaa;*/
+    
+    border-left: 15px solid;
+    white-space: normal;
+    vertical-align: text-top;
+    overflow-wrap: break-word;
+    
+}
+            
+            /* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #333333; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #999999; 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #777777; 
+}
+             #info{
+overflow:hidden;
+border-style: solid;
+    border-width:5px;
+        
+         overflow-wrap: break-word;
+/*    height: 200px;*/
+}
+            #profile {
+        position: relative;
+        width: 100%;
+   
+        object-fit: cover;
+}
+            
+            * {box-sizing: border-box}
+/* Set height of body and the document to 100% */
+/* Style tab links */
+.tablink {
+    background-color: #444;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+.tablink:hover {
+    background-color: #777;
+}
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 60px 20px;
+    height: 100%;
+}
+            #feed_nav{
+                position:absolute;
+                width:100%;
+                left:0px;
+            }
+            #search_input{
+                position:absolute;
+                left:10px;
+                width:100%;
+            }
+            #search_input button{
+               
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+                width:20%;
+            }
+            #search button:hover {
+  background: #ccc;
+}
+            
+            #search input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+                width:65%;
+  font-size: 17px;
+  border: none;
+}
+            .discovery{
+               background-color: #555555;
+            }        
+            #next_graph{
+                padding:5px 30px;
+                opacity: 0.7;
+            }
+        
+        
+        </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- javascript-->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>Inventio Arrangement</title>
+    <!--
+<script type="text/javascript">
+  DiscourseEmbed = { discourseUrl: 'http://138.68.232.208/',
+                      topicId: 76};
+  (function() {
+    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+  })();
+</script>
+-->
+</head>
+
+<body style="overflow:hidden;">
+    <div class="container-fluid" style="background-color:white">
+        <div class="row" style="height:5vh; background-color: #333333;"><img style="width: 5vh;" src="/img/nav_icon.png"></div>
+        <div class="row">
+            <div class="col-md-3" style=" height: 95vh;background-color: #555555; overflow-y:scroll; overflow-x:hidden;">
+                <div id="feed_nav">
+                    <button class="tablink" onclick="openPage('search', this, '#555555')">Search</button>
+                    <button class="tablink" onclick="openPage('selection', this, '#555555')" id="defaultOpen">Selection</button>
+                    <button class="tablink" onclick="openPage('neighbors', this, '#555555')">Neighbors</button>
+                    <button class="tablink" onclick="openPage('paths', this, '#555555')">Paths</button>
+                    <button class="tablink" onclick="logout()">Logout</button>
+                    <a href="http://invitation.babaraliseehar.com/changepassword" class="tablink">Change Password</a>
+
+                </div>
+                <div id="search" class="tabcontent">
+                    <div id="search_input">
+                        <input type="text" id="search_text" placeholder="Search...">
+                        <button onclick="searchGraph()" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                    <ul id="list_search" class="list"></ul>
+                </div>
+                <div id="selection" class="tabcontent">
+                    <ul id="list" class="list"></ul>
+                </div>
+                <div id="neighbors" class="tabcontent">
+                    <p>in development</p>
+                </div>
+                <div id="paths" class="tabcontent">
+                    <p>in development</p>
+                </div>
+            </div>
+            <div class="col" style="height: 95vh;overflow-y:auto;">
+                <div class="row" style='background-color: #555555;'>
+                    <div class="col-9 col-lg-10" style="height: 75vh; background-color: #000000;">
+                        <div id="3d-graph" style="text-align: center; color:white; padding-top: 15px;">LOADING</div>
+                        <button id="next_graph" style="position: absolute; z-index: 5; right: 0px; bottom:0px;"> &gt;
+                        </button>
+                    </div>
+                    <div class="col-3 col-lg-2" style="border-color: black; border-width: 5px; :hidden;overflow-y:auto; height: 75vh; ">
+                        <div id="filters" style=" margin-top: 10px; border-color: black; border-width: 5px;">
+                            <button id="direct" class="button direct inactive" onclick="toggle_direct()">Directed</button>
+                            <button id="camera" class="button view inactive" onclick="cameraMode()">View Mode</button>
+                            <p>Node Size Minimum</p>
+                            <input type="range" min="0" max="22" value="0" class="slider" id="myRange">
+                            <p>Edge Weight Minimum</p>
+                            <input type="range" min="0" max="12" value="0" class="slider" id="myRange2">
+                            <div id="color_filters"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div style="width: 20vh; background-color: #555555;">
+                        <div class="row" style="height: 20vh;">
+                            <div class="col">
+                                <div id="info">
+                                    <img id="profile" style="height: 19vh;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div id="point" class="col-lg-12 col-md-12" style='color:white; padding: 20px; min-height: 20vh; background-color: #555555;'>
+                                <h2 id="point_title" style=""></h2>
+                                <p id="point_text"></p>
+                                <div id='discourse-comments' style="background-color: #555555;"></div>
+                            </div>
+                            <!--                                <div class = "col-lg-6 col-md-12"style= 'background-color: #555555;' ></div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src='/node_modules/three/build/three.js'></script>
+    <script src="//unpkg.com/3d-force-graph"></script>
+    <script type="text/javascript" src='/node_modules/airtable/build/airtable.browser.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</body>
+<script type="text/javascript" src='main.js'></script>
+<script>
+    function logout() {
+
+        $.get("services/logout.php", {user_id:localStorage.getItem('invitation_user')},
+            function (data, textStatus, jqXHR) {
+                localStorage.removeItem('invitation_login')
+                localStorage.removeItem('invitation_user')
+                window.location.href = 'login.html';
+            }
+        );
+    }
+</script>
+
+</html>
